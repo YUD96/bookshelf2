@@ -1,12 +1,11 @@
-module Web
-  module Controllers
-    module Sessions
-      class New
-        include Web::Action
+module Web::Controllers::Sessions
+	class New
+		include Web::Action
 
-        def call(params)
-        end
-      end
-    end
-  end
+			def call(_); end
+
+			private
+
+			def authenticate!; end
+	end  
 end

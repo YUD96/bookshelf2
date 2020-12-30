@@ -1,12 +1,10 @@
-module Web
-  module Controllers
-    module Books
-      class Destroy
-        include Web::Action
+module Web::Controllers::Books
+	class Destroy
+		include Web::Action
 
-        def call(params)
-        end
-      end
-    end
-  end
+		def call(_)
+			session[:user_id] = nil
+			redirect_to '/login'
+		end
+	end
 end

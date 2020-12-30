@@ -1,9 +1,5 @@
-module Web
-  module Views
-    module Sessions
-      class Destroy
-        include Web::View
-      end
-    end
-  end
+module Web::Views::Sessions
+	class Destroy
+		include Web::View
+	end
 end

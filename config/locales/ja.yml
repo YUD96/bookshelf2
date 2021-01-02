@@ -1,0 +1,9 @@
+ja:
+  models:
+    attributes:
+      user:
+        name: "名前"
+        email: "メール"
+
+  errors:
+    filled?: "入力してください！"

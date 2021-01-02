@@ -1,0 +1,9 @@
+en:
+  models:
+    attributes:
+      user:
+        name: "My name"
+        email: "My E-mail"
+
+  errors:
+    filled?: "MUST be filled!"

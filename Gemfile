@@ -6,6 +6,7 @@ gem 'hanami-model', '~> 1.3'
 gem 'slim'
 gem 'mysql2'
 gem 'bcrypt'
+gem 'hanami-i18n'
 
 group :development do
   # Code reloading

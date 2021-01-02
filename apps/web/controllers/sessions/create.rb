@@ -15,7 +15,7 @@ module Web::Controllers::Sessions
 			if params.valid?
 				user = UserRepository.new.find_by_email(params[:session][:mail])
 				if !user.nil? && authenticate?(user)
-					session[:user_id] = user.id
+					log_in(user)
 					redirect_to '/books'
 				else
 					redirect_to '/login'
@@ -29,12 +29,16 @@ module Web::Controllers::Sessions
 			BCrypt::Password.new(user.password).is_password?(requested_password)
 		end
 
-		def reqested_email	
+		def reqested_email
 			params[:session][:mail]
 		end
 
 		def requested_password
 			params[:session][:password]
+		end
+
+		def log_in(user)
+			session[:user_id] = user.id
 		end
 
 		def authenticate!; end

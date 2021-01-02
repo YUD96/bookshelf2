@@ -1,13 +1,12 @@
-module Web
-  module Controllers
-    module Sessions
-      class Destroy
-        include Web::Action
-
-				def call(params)
-					session.delete(:user_id)
-        end
-      end
-    end
+module Web::Controllers::Sessions
+	class Destroy
+		include Web::Action
+		include Hanami::Action::Session
+		
+		def call(params)
+			session[:user_id] = nil
+			flash[:success] = 'ログアウトに成功しました。'
+			redirect_to '/login'
+		end		
   end
 end

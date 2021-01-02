@@ -10,11 +10,5 @@ module Web::Views::Sessions
 				submit 'POST'
 			end
 		end
-
-		def logout
-			form_for :session , '/logout' do 
-				submit 'LOGOUT'
-			end
-		end
   end
 end

@@ -1,6 +1,7 @@
 module Web::Controllers::Books
 	class Index
 		include Web::Action
+		before :authenticate!
 		expose :books
 
 		def call(params)
@@ -9,6 +10,6 @@ module Web::Controllers::Books
 
 		private
 
-		def authenticate!; end
+		# def authenticate!;end
   end
 end

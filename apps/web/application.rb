@@ -72,7 +72,7 @@ module Web
       #               See #scheme and #ssl?
       #   :httponly - Prevent JavaScript access (Boolean - true by default)
       #
-      # cookies true
+      cookies true
       # or
       # cookies max_age: 300
 
@@ -246,7 +246,9 @@ module Web
       # This is useful for sharing common functionality
       #
       # See: http://www.rubydoc.info/gems/hanami-controller#Configuration
-      controller.prepare do
+			controller.prepare do
+				include Web::Authentication
+				# include Authentication
         # include MyAuthentication # included in all the actions
         # before :authenticate!    # run an authentication before callback
       end

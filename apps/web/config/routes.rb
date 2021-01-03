@@ -8,8 +8,11 @@ post 'login', to: 'sessions#create'
 delete 'logout', to: 'sessions#destroy'
 get '/books', to: 'books#index'
 get '/books/new', to: 'books#new'
-post '/books/create', to: 'books#create'
+post '/books', to: 'books#create'
 delete '/books/:id', to: 'books#destroy'
-get '/users/:id', to: 'users#show'
+
+get '/users', to: 'users#index'
 get '/users/new', to: 'users#new'
+get '/users/:id', to: 'users#show'
 post '/users', to: 'users#create'
+

@@ -1,0 +1,9 @@
+h1 Users List
+
+- if users.any?
+	#users
+		- users.each do |user|
+			h2.user
+				= user.name
+			p
+				= user.mail

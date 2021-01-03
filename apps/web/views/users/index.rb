@@ -1,8 +1,8 @@
 module Web
   module Views
     module Users
-      class Show
-				include Web::View
+      class Index
+        include Web::View
       end
     end
   end

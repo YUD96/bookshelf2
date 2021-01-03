@@ -6,7 +6,7 @@ module Web
 				expose :user				
 
 				def call(params)
-					@user = UserRepository.new.find(1)					
+					@user = UserRepository.new.find(params[:id])					
         end
       end
     end

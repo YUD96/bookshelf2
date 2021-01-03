@@ -1,0 +1,12 @@
+h1
+  | Sign up
+.row
+  .span6.offset3
+    = form_for :user, '/users', method: :post do
+      = label :name
+      = text_field :name
+      = label :mail
+      = text_field :mail
+      = label :password
+      = password_field :password
+      = submit "Create my account", class: "btn btn-large btn-primary"

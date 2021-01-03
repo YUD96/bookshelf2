@@ -1,4 +1,4 @@
-h1 テストフォーム
+h1.login_title ログインフォーム
 
 
 - if flash[:success] != nil
@@ -8,4 +8,4 @@ h1 テストフォーム
 - if flash[:alert] != nil
 	.alert.alert-danger role="alert"
 		= flash[:alert]
-= form
+= render partial: 'sessions/form'

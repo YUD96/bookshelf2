@@ -1,0 +1,9 @@
+= form_for :session, '/login', method: :post do
+	.form-group
+		= label :mail
+		.form-control
+			= email_field :mail
+	.form-group
+		= label :password
+	.form-control	
+		= text_field :password

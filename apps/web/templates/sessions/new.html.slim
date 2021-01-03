@@ -1,6 +1,11 @@
 h1 テストフォーム
 
-- %i[success alert].each do |key|
-	= flash[key]
 
+- if flash[:success] != nil
+	.alert.alert-primary role="alert"
+		= flash[:success]
+
+- if flash[:alert] != nil
+	.alert.alert-danger role="alert"
+		= flash[:alert]
 = form

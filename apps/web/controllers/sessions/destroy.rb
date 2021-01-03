@@ -5,7 +5,7 @@ module Web::Controllers::Sessions
 		
 		def call(params)
 			session[:user_id] = nil
-			flash[:success] = 'ログアウトに成功しました。'
+			flash[:success] = 'success!! logout'
 			redirect_to '/login'
 		end		
   end

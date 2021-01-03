@@ -18,7 +18,6 @@ module Web::Controllers::Books
 			else
 				self.status = 422
 			end
-			
 		end
 	end
 end

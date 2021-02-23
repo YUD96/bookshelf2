@@ -5,9 +5,13 @@ gem 'hanami',       '~> 1.3'
 gem 'hanami-model', '~> 1.3'
 gem 'slim'
 gem 'mysql2'
+gem "shrine", "~> 3.0"
+gem "image_processing", "~> 1.8"
+# gem "shrine-rom"
 gem 'bcrypt'
 gem 'hanami-bootstrap'
 gem 'sassc'
+
 
 group :development do
   # Code reloading

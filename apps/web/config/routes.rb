@@ -16,3 +16,4 @@ get '/users/new', to: 'users#new'
 get '/users/:id', to: 'users#show'
 post '/users', to: 'users#create'
 
+post '/images', to: 'images#create'
